@@ -7,7 +7,7 @@ import { themeSettings } from "./theme";
 import Navbar from "@/scenes/navbar";
 import Dashboard from "@/scenes/dashboard";
 import Predictions from "@/scenes/predictions";
-
+//import Suggestions from "@/suggestions";
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), []);
   return (
@@ -20,6 +20,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/predictions" element={<Predictions />} />
+              {/* <Route path="/suggestions" element={<Suggestions />} /> */}         
             </Routes>
           </Box>
         </ThemeProvider>

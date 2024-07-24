@@ -13,6 +13,7 @@ import Product from "./models/Product.js";
 import Transaction from "./models/Transaction.js";
 import { kpis, products, transactions } from "./data/data.js";
 
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 1;
 /* CONFIGURATIONS */
 dotenv.config();
 const app = express();
@@ -40,9 +41,10 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
     /* ADD DATA ONE TIME ONLY OR AS NEEDED */
-    // await mongoose.connection.db.dropDatabase();
-    // KPI.insertMany(kpis);
-    // Product.insertMany(products);
-    // Transaction.insertMany(transactions);
+   //  await mongoose.connection.db.dropDatabase();
+   //  KPI.insertMany(kpis);
+   //  Product.insertMany(products);
+    //  Transaction.insertMany(transactions);
+    
   })
   .catch((error) => console.log(`${error} did not connect`));

@@ -57,6 +57,7 @@ const Dashboard = () => {
       display="grid"
       gap="1.5rem"
       sx={
+        
         isAboveMediumScreens
           ? {
               gridTemplateColumns: "repeat(3, minmax(370px, 1fr))",

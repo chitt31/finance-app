@@ -18,6 +18,9 @@ const Row3 = () => {
   const { data: kpiData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
   const { data: transactionData } = useGetTransactionsQuery();
+  console.log("kpiData:", kpiData);
+  console.log("productData:", productData);
+  console.log("transactionData:", transactionData);
 
   const pieChartData = useMemo(() => {
     if (kpiData) {
@@ -207,5 +210,6 @@ const Row3 = () => {
     </>
   );
 };
+
 
 export default Row3;
